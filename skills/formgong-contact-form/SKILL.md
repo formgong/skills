@@ -87,6 +87,10 @@ Give every input a `name` attribute and include the hidden `botcheck` input insi
 - Keep the honeypot. Turnstile is optional (`cf-turnstile-response`), required only if the owner enables it or the form sends files.
 - Errors have a stable `code` (for example `unknown_access_key`, `limit_exceeded`); branch on the code, display the message.
 
+## Ratings and testimonials
+
+To collect a star rating and a testimonial, use the same endpoint: radio inputs named `rating` (1 to 5), plus `name`, `testimonial` and a `may_publish` checkbox. Each entry reaches the owner's inbox and Telegram. A widget that displays approved testimonials on the site is early access only (https://formgong.com/en/testimonial-widget/), so do not embed or promise one. Google does not show review stars for a business's own reviews, so do not add aggregateRating markup for them.
+
 ## 5. Verify
 
 Submit the form once on the deployed site. It must show success only after Formgong answered, and the submission must appear in the Formgong inbox. For a static page, https://formgong.com/en/tools/form-checker/ reads the public HTML and lists form problems.
